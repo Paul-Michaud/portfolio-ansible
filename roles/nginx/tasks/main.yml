@@ -1,0 +1,30 @@
+- name: Copy nginx config file
+  template:
+    src: portfolio.conf.j2
+    dest: /etc/nginx/sites-available/portfolio.conf
+
+- name: Create symbolic link to sites-enabled
+  file:
+    src: /etc/nginx/sites-available/portfolio.conf
+    dest: /etc/nginx/sites-enabled/portfolio.conf
+    state: link
+
+- name: Create ssl certs directory
+  file:
+    path: /etc/nginx/ssl
+    state: directory
+    mode: 0755
+
+#- name: Generate dhparams
+#  openssl_dhparam:
+#    path: /etc/nginx/ssl/dhparams.pem
+
+- name: enable service nginx
+  systemd:
+    name: nginx
+    enabled: yes
+
+- name: restart nginx
+  systemd:
+    state: restarted
+    name: nginx

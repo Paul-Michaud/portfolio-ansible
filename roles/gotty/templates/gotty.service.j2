@@ -1,0 +1,13 @@
+[Unit]
+Description=Gotty
+ 
+[Service]
+Type=simple
+User={{ user }}
+Group={{ user }}
+ExecStart=/home/{{ user }}/go/bin/gotty --config /home/{{ user }}/portfolio/gotty/.gotty --index /var/www/portfolio/html/index.html docker run -m 128m --memory-swap -1 -it --network none --read-only --rm portfolio timeout 3600 bash
+Restart=always
+WorkingDirectory=/
+
+[Install]
+WantedBy=multi-user.target

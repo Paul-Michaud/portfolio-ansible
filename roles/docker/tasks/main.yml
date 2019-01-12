@@ -1,0 +1,30 @@
+- name : Create linux directory
+  file:
+    path: /home/{{ user }}/portfolio/docker/linux/
+    state: directory
+    mode: 0755
+
+- name : Create script directory
+  file:
+    path: /home/{{ user }}/portfolio/docker/scripts/
+    state: directory
+    mode: 0755
+
+- name: Copy the necessary file to build the image
+  copy: src={{ item.src }} dest={{ item.dest }}
+  with_items:
+    - { src: '.bashrc', dest: '/home/{{ user }}/portfolio/docker/linux/.bashrc' }
+    - { src: 'all.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/all.sh' }
+    - { src: 'competences.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/competences.sh' }
+    - { src: 'contact.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/contact.sh' }
+    - { src: 'cv.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/cv.sh' }
+    - { src: 'diplomes.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/diplomes.sh' }
+    - { src: 'experiences.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/experiences.sh' }
+    - { src: 'help.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/help.sh' }
+    - { src: 'info.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/info.sh' }
+    - { src: 'paul.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/paul.sh' }
+    - { src: 'projets.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/projets.sh' }
+
+    
+- name: Build the portfolio image
+  command: docker build -t portfolio /home/{{ user }}/portfolio/docker

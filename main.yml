@@ -1,0 +1,19 @@
+---
+- hosts: production
+  vars:
+    user: paul
+    domain_name: "paul.michaud.bzh"
+    ssl_certificate: "/etc/nginx/ssl/paulmichaudbzhfullchain.pem"
+    ssl_certificate_key: "/etc/nginx/ssl/paulmichaudbzhprivkey.pem"
+  remote_user: "{{ user }}"
+  roles:
+    - packages
+    - html
+    - css
+    - js
+    - nginx
+    - docker
+    - gotty
+    - tools
+
+  become: true

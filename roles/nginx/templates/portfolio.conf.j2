@@ -1,0 +1,98 @@
+server {
+	return 				404;
+}
+
+server {
+        listen      			80;
+        server_name    			{{ domain_name }};
+        # Redirect all non-https requests
+	rewrite ^ https://$host$request_uri? permanent;
+	access_log 			/var/log/nginx/portfolio_access.log;
+	error_log 			/var/log/nginx/portfolio_error.log;
+}
+
+server {
+	listen      			443 default_server ssl http2;
+
+	server_name 			{{ domain_name }};
+	
+	ssl_certificate 		{{ ssl_certificate }};
+        ssl_certificate_key 		{{ ssl_certificate_key}};
+
+	ssl_dhparam 			/etc/nginx/ssl/dhparams.pem;
+
+	ssl_protocols 			TLSv1.2 TLSv1.1 TLSv1;
+	ssl_prefer_server_ciphers 	on;
+	ssl_ciphers 			EECDH+ECDSA+AESGCM:EECDH+aRSA+AESGCM:EECDH+ECDSA+SHA512:EECDH+ECDSA+SHA384:EECDH+ECDSA+SHA256:ECDH+AESGCM:ECDH+AES256:DH+AESGCM:DH+AES256:RSA+AESGCM:!aNULL:!eNULL:!LOW:!RC4:!3DES:!MD5:!EXP:!PSK:!SRP:!DSS;
+
+	ssl_session_cache 		shared:TLS:2m;
+
+	gzip 				on;
+	gzip_disable 			"msie6";
+
+	gzip_vary 			on;
+	gzip_proxied 			any;
+	gzip_comp_level 		6;
+	gzip_buffers 			16 8k;
+	gzip_http_version 		1.1;
+	gzip_types 			text/plain text/css application/json application/javascript application/x-javascript text/javascript;
+
+	add_header Cache-Control 	public;
+	expires 			365d;
+
+	ssl_stapling 			on;
+	ssl_stapling_verify 		on;
+	resolver 			8.8.8.8;
+
+	add_header 			Strict-Transport-Security 'max-age=31536000; includeSubDomains';
+        add_header 			X-Frame-Options "SAMEORIGIN";
+	add_header 			X-XSS-Protection "1; mode=block";
+        add_header 			X-Content-Type-Options nosniff;
+        add_header 			Referrer-Policy "no-referrer";
+	add_header 			Feature-Policy "sync-xhr 'self'";
+
+	add_header 			Content-Security-Policy "default-src 'none'; connect-src 'self' wss://{{ domain_name }};; form-action 'none'; base-uri 'self'; frame-ancestors 'none'; script-src 'self' https://www.google-analytics.com; img-src 'self' https://i.imgur.com https://www.google-analytics.com https://stats.g.doubleclick.net; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; font-src 'self' https://use.fontawesome.com https://fonts.googleapis.com https://fonts.gstatic.com; frame-src 'self'; object-src 'self'";
+
+	location / {
+		proxy_set_header 	X-Real-IP $remote_addr;
+                proxy_set_header 	X-Forwarded-For $proxy_add_x_forwarded_for;
+                proxy_set_header 	Host $host;
+                proxy_set_header 	X-NginX-Proxy true;
+                proxy_pass 		http://localhost:8080/;
+                proxy_redirect 		http://localhost:8080/ https://$server_name/;
+		proxy_http_version 	1.1;
+		proxy_set_header 	Upgrade $http_upgrade;
+		proxy_set_header 	Connection upgrade;
+        }
+
+	location /cv {
+                alias 			/var/www/portfolio/docs/;
+		index 			CV-Paul_Michaud.pdf;
+        }
+
+	location /myjs {
+		alias 			/var/www/portfolio/html/myjs/;
+	}
+
+	location /mycss {
+		alias 			/var/www/portfolio/html/mycss/;
+	}
+
+	location /robots.txt { 
+		alias 			/var/www/portfolio/html/robots.txt; 
+	}
+
+	error_page 502 /502.html;
+        location = /502.html {
+		root  			/var/www/portfolio/html;
+       }
+
+	error_page 403 /403.html;
+        location = /403.html {
+		root  			/var/www/portfolio/html;
+       }
+
+       access_log 			/var/log/nginx/portfolio_access.log;
+       error_log 			/var/log/nginx/portfolio_error.log;
+
+}

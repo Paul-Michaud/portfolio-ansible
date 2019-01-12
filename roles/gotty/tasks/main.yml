@@ -1,0 +1,22 @@
+- name: Get gotty from source
+  command: go get github.com/yudai/gotty
+  become: no
+  
+- name: Copy gotty service file
+  template:
+    src: gotty.service.j2
+    dest: /etc/systemd/system/gotty.service
+
+- name: force systemd to reread configs
+  systemd:
+    daemon_reload: yes
+
+- name: enable service gotty
+  systemd:
+    name: gotty
+    enabled: yes
+
+- name: restart gotty
+  systemd:
+    state: restarted
+    name: gotty
