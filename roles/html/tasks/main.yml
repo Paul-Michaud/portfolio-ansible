@@ -21,7 +21,7 @@
 - name: Copy cv
   copy:
     src: CV-Paul_Michaud.pdf
-    dest: /var/www/portfolio/html/CV-Paul_Michaud.pdf
+    dest: /var/www/portfolio/html/docs/CV-Paul_Michaud.pdf
     owner: root
     group: root
-    mode: 0640
+    mode: 0644
