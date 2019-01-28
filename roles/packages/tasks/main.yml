@@ -4,7 +4,7 @@
 
 - name: Install docker
   apt:
-    name: docker
+    name: docker.io
 
 - name: Install nginx
   apt:
