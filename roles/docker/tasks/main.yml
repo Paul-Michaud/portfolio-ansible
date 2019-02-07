@@ -13,18 +13,18 @@
 - name: Copy the necessary file to build the image
   copy: src={{ item.src }} dest={{ item.dest }}
   with_items:
-    - { src: '.bashrc', dest: '/home/{{ user }}/portfolio/docker/linux/.bashrc' }
-    - { src: 'all.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/all.sh' }
-    - { src: 'competences.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/competences.sh' }
-    - { src: 'contact.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/contact.sh' }
-    - { src: 'cv.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/cv.sh' }
-    - { src: 'diplomes.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/diplomes.sh' }
-    - { src: 'experiences.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/experiences.sh' }
-    - { src: 'help.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/help.sh' }
-    - { src: 'info.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/info.sh' }
-    - { src: 'paul.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/paul.sh' }
-    - { src: 'projets.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/projets.sh' }
-    - { src: 'Dockerfile', dest: '/home/{{ user }}/portfolio/docker/Dockerfile' }
+    - { src: '.bashrc', dest: '/home/{{ user }}/portfolio/docker/linux/.bashrc', mode: '644' }
+    - { src: 'all.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/all.sh', mode: '644' }
+    - { src: 'competences.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/competences.sh', mode: '644' }
+    - { src: 'contact.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/contact.sh', mode: '644' }
+    - { src: 'cv.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/cv.sh', mode: '644' }
+    - { src: 'diplomes.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/diplomes.sh', mode: '644' }
+    - { src: 'experiences.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/experiences.sh', mode: '644' }
+    - { src: 'help.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/help.sh', mode: '644' }
+    - { src: 'info.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/info.sh', mode: '644' }
+    - { src: 'paul.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/paul.sh', mode: '644' }
+    - { src: 'projets.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/projets.sh', mode: '644' }
+    - { src: 'Dockerfile', dest: '/home/{{ user }}/portfolio/docker/Dockerfile', mode: '644' }
 
     
 - name: Build the portfolio image
