@@ -20,6 +20,8 @@
     owner: root
     group: root
     mode: 0644
+  notify:
+    - restart nginx
 
 - name: force systemd to reread configs
   systemd:
@@ -30,7 +32,3 @@
     name: gotty
     enabled: yes
 
-- name: restart gotty
-  systemd:
-    state: restarted
-    name: gotty
