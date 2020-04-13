@@ -10,5 +10,5 @@
   cron:
     name: "Check portfolio containers"
     minute: "*/10"
-    job: "/usr/local/bin/getlogs.sh >/dev/null 2>&1"
+    job: "/usr/local/bin/getlogs.sh >/dev/null 2>&1 && systemctl restart nginx"
 
