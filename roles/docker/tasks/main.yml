@@ -32,6 +32,7 @@
 
 - name: Build the portfolio image
   command: docker build -t portfolio /home/{{ user }}/portfolio/docker
+  changed_when: false
 
 - name: Adding user that will run gotty to docker group
   user:
