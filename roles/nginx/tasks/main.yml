@@ -1,3 +1,7 @@
+- name: Install nginx
+  apt:
+    name: nginx
+
 - name: Copy nginx config file
   template:
     src: portfolio.conf.j2

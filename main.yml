@@ -1,6 +1,6 @@
 ---
 - hosts: production
-  gather_facts: no
+  gather_facts: yes
   become: true
   vars:
     user: "paul"
@@ -12,10 +12,7 @@
     - name: "install python"
       raw: sudo apt-get -y install python
   roles:
-    - { role: packages, tags: packages }
-    - { role: html, tags: html }
-    - { role: css, tags: css }
-    - { role: js, tags: js }
+    - { role: web, tags: web }
     - { role: nginx, tags: nginx }
     - { role: docker, tags: docker }
     - { role: gotty, tags: gotty }

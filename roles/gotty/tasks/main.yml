@@ -1,11 +1,18 @@
+- name: Install go
+  apt:
+    name: golang
+
 - name: Get gotty from source
   command: go get github.com/yudai/gotty
   become: no
+  changed_when: False
 
 - name: Copy gotty service file
   template:
     src: gotty.service.j2
     dest: /etc/systemd/system/gotty.service
+  notify:
+    - systemd reload
 
 - name : Create gotty config directory
   file:
@@ -21,14 +28,10 @@
     group: root
     mode: 0644
   notify:
-    - restart nginx
+    - restart gotty
 
-- name: force systemd to reread configs
-  systemd:
-    daemon_reload: yes
-
-- name: enable service gotty
+- name: enable and start service gotty
   systemd:
     name: gotty
     enabled: yes
-
+    state: started

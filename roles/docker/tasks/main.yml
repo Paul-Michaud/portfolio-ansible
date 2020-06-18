@@ -1,3 +1,7 @@
+- name: Install docker
+  apt:
+    name: docker.io
+
 - name : Create linux directory
   file:
     path: /home/{{ user }}/portfolio/docker/linux/

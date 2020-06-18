@@ -1,0 +1,31 @@
+# HTML
+- name : Create html directory
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: 0755
+  with_items:
+    - /var/www/portfolio/html/
+    - /var/www/portfolio/html/docs
+    - /var/www/portfolio/html/mycss/
+    - /var/www/portfolio/html/myjs/
+
+- name: Copy the necessary html files
+  copy: src={{ item.src }} dest={{ item.dest }}
+  with_items:
+    - { src: '6253478891.js', dest: '/var/www/portfolio/html/myjs/6253478891.js' }
+    - { src: 'auth_token.js', dest: '/var/www/portfolio/html/myjs/auth_token.js' }
+    - { src: 'config.js', dest: '/var/www/portfolio/html/myjs/config.js' }
+    - { src: 'gtag.js', dest: '/var/www/portfolio/html/myjs/gtag.js' }
+    - { src: 'gtagua.js', dest: '/var/www/portfolio/html/myjs/gtagua.js' }
+    - { src: 'jquery.min.js', dest: '/var/www/portfolio/html/myjs/jquery.min.js' }
+    - { src: 'noie.js', dest: '/var/www/portfolio/html/myjs/noie.js' }
+    - { src: 'portfolio.css', dest: '/var/www/portfolio/html/mycss/portfolio.css' }
+    - { src: 'term.css', dest: '/var/www/portfolio/html/mycss/term.css' }
+    - { src: '403.html', dest: '/var/www/portfolio/html/403.html' }
+    - { src: '502.html', dest: '/var/www/portfolio/html/502.html' }
+    - { src: 'index.html', dest: '/var/www/portfolio/html/index.html' }
+    - { src: 'robots.txt', dest: '/var/www/portfolio/html/robots.txt' }
+    - { src: 'CV-Paul_Michaud.pdf', dest: '/var/www/portfolio/html/docs/CV-Paul_Michaud.pdf'}
+  notify:
+    - restart gotty

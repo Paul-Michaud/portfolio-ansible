@@ -1,0 +1,8 @@
+- name: restart gotty
+  systemd:
+    state: restarted
+    name: gotty
+
+- name: systemd reload
+  systemd:
+    daemon_reload: yes
