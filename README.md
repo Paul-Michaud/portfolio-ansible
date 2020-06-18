@@ -1,5 +1,7 @@
 # Portfolio
 
+![Ansible Lint](https://github.com/Paul-Michaud/portfolio-ansible/workflows/Ansible%20Lint/badge.svg)
+
 ### Usage
 
 ```
