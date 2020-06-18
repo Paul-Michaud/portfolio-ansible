@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:latest
 
 RUN useradd -ms /bin/bash visiteur
 RUN apt-get update && apt-get install -y pv
