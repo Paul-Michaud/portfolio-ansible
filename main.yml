@@ -3,11 +3,11 @@
   gather_facts: no
   become: true
   vars:
-    user: paul
+    user: "paul"
     domain_name: "paul.michaud.bzh"
     ssl_certificate: "/etc/nginx/ssl/fullchain.pem"
     ssl_certificate_key: "/etc/nginx/ssl/privkey.pem"
-  remote_user: "{{ user }}" 
+  remote_user: "{{ user }}"
   pre_tasks:
     - name: "install python"
       raw: sudo apt-get -y install python
