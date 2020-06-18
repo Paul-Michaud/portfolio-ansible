@@ -26,7 +26,6 @@
     - { src: 'projets.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/projets.sh', mode: '644' }
     - { src: 'Dockerfile', dest: '/home/{{ user }}/portfolio/docker/Dockerfile', mode: '644' }
 
-    
 - name: Build the portfolio image
   command: docker build -t portfolio /home/{{ user }}/portfolio/docker
 

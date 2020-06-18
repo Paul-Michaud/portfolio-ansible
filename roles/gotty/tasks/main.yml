@@ -1,7 +1,7 @@
 - name: Get gotty from source
   command: go get github.com/yudai/gotty
   become: no
-  
+
 - name: Copy gotty service file
   template:
     src: gotty.service.j2
