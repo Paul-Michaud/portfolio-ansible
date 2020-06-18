@@ -1,6 +1,6 @@
 # Portfolio
 
-### Utilization
+### Usage
 
 ```
 $ git clone https://github.com/Paul-Michaud/portfolio-ansible.git
