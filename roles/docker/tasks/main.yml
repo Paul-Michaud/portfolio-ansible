@@ -19,20 +19,26 @@
   with_items:
     - { src: '.bashrc', dest: '/home/{{ user }}/portfolio/docker/linux/.bashrc', mode: '644' }
     - { src: 'all.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/all.sh', mode: '644' }
-    - { src: 'competences.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/competences.sh', mode: '644' }
+    - { src: 'skills.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/skills.sh', mode: '644' }
     - { src: 'contact.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/contact.sh', mode: '644' }
     - { src: 'cv.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/cv.sh', mode: '644' }
-    - { src: 'diplomes.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/diplomes.sh', mode: '644' }
+    - { src: 'certifications.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/certifications.sh', mode: '644' }
     - { src: 'experiences.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/experiences.sh', mode: '644' }
     - { src: 'help.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/help.sh', mode: '644' }
     - { src: 'info.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/info.sh', mode: '644' }
     - { src: 'paul.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/paul.sh', mode: '644' }
-    - { src: 'projets.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/projets.sh', mode: '644' }
+    - { src: 'projects.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/projects.sh', mode: '644' }
     - { src: 'Dockerfile', dest: '/home/{{ user }}/portfolio/docker/Dockerfile', mode: '644' }
 
 - name: Build the portfolio image
-  command: docker build -t portfolio /home/{{ user }}/portfolio/docker
-  changed_when: false
+  docker_image:
+    name: portfolio
+    build:
+      path: /home/{{ user }}/portfolio/docker
+      pull: yes
+    state: present
+    source: build 
+    force_source: yes
 
 - name: Adding user that will run gotty to docker group
   user:
