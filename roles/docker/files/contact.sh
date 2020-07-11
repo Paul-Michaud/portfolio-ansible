@@ -8,5 +8,4 @@ echo -e "
 
  paul.du56@${ORANGE}gmail${NC}.com
  
- Twitter${ORANGE}@${NC}millionnnnnnn
 "
