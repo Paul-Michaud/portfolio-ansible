@@ -1,3 +1,10 @@
+- name: Add nginx repository
+  apt_repository:
+    repo: deb http://nginx.org/packages/mainline/ubuntu/ bionic nginx
+    state: present
+    filename: nginx
+    update_cache: yes
+
 - name: Install nginx
   apt:
     name: nginx
@@ -5,15 +12,7 @@
 - name: Copy nginx config file
   template:
     src: portfolio.conf.j2
-    dest: /etc/nginx/sites-available/portfolio.conf
-  notify:
-    - restart nginx
-
-- name: Create symbolic link to sites-enabled
-  file:
-    src: /etc/nginx/sites-available/portfolio.conf
-    dest: /etc/nginx/sites-enabled/portfolio.conf
-    state: link
+    dest: /etc/nginx/conf.d/portfolio.conf
   notify:
     - restart nginx
 
