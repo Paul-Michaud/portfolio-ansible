@@ -37,7 +37,7 @@
       path: /home/{{ user }}/portfolio/docker
       pull: yes
     state: present
-    source: build 
+    source: build
     force_source: yes
 
 - name: Adding user that will run gotty to docker group
