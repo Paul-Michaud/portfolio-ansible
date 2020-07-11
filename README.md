@@ -11,4 +11,4 @@ $ git clone https://github.com/Paul-Michaud/portfolio-ansible.git
 ```
 $ ansible-playbook -i production main.yml
 ```
-Certif auto-renew not included
+Certif auto-renew not included see https://buzut.fr/certbot-challenge-dns-ovh-wildcard/ 
