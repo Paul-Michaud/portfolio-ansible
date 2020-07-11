@@ -119,15 +119,15 @@ fi
 PATH=$HOME/bin
 #Yes you can still use every command :)
 
-alias all="$HOME/bin/all.sh"
-alias skills="$HOME/bin/skills.sh"
-alias contact="$HOME/bin/contact.sh"
-alias cv="$HOME/bin/cv.sh"
-alias certifications="$HOME/bin/certifications.sh"
-alias experiences="$HOME/bin/experiences.sh"
-alias help="$HOME/bin/help.sh"
-alias info="$HOME/bin/info.sh"
-alias paul="$HOME/bin/paul.sh"
-alias projects="$HOME/bin/projects.sh"
+alias all="bash $HOME/bin/all.sh"
+alias skills="bash  $HOME/bin/skills.sh"
+alias contact="bash  $HOME/bin/contact.sh"
+alias cv="bash $HOME/bin/cv.sh"
+alias certifications="bash  $HOME/bin/certifications.sh"
+alias experiences="bash $HOME/bin/experiences.sh"
+alias help="bash  $HOME/bin/help.sh"
+alias info="bash  $HOME/bin/info.sh"
+alias paul="bash $HOME/bin/paul.sh"
+alias projects="bash  $HOME/bin/projects.sh"
 
 echo "* Tapez <help> puis appuyer sur la touche entrée pour avoir la liste des commandes disponibles" |pv -qL 20
