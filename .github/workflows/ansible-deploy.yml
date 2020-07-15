@@ -13,4 +13,8 @@ jobs:
         playbook: main.yml
         directory: ./
         key: ${{secrets.SSH_PRIVATE_KEY}}
-        inventory: ./production
+        inventory: |
+          michaud.bzh
+        options: |
+          --verbose
+  
