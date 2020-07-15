@@ -57,9 +57,9 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1="\[$(tput bold)\]\[\033[38;5;10m\]Visiteur\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\] > \[$(tput sgr0)\]"
+    PS1="\[$(tput bold)\]\[\033[38;5;10m\]Guest\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\] > \[$(tput sgr0)\]"
 else
-    PS1="\[$(tput bold)\]\[\033[38;5;10m\]Visiteur\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\] > \[$(tput sgr0)\]"
+    PS1="\[$(tput bold)\]\[\033[38;5;10m\]Guest\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\] > \[$(tput sgr0)\]"
 fi
 unset color_prompt force_color_prompt
 
@@ -130,4 +130,4 @@ alias info="bash  $HOME/bin/info.sh"
 alias paul="bash $HOME/bin/paul.sh"
 alias projects="bash  $HOME/bin/projects.sh"
 
-echo "* Tapez <help> puis appuyer sur la touche entrée pour avoir la liste des commandes disponibles" |pv -qL 20
+echo "* Type <help> then press the enter key to get the list of available commands" |pv -qL 20
