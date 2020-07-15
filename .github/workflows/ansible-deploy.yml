@@ -4,6 +4,8 @@ on: [push]
 
 jobs:
   deploy:
+    runs-on: ubuntu-latest
+
     steps:
     - name: Run playbook
       uses: dawidd6/action-ansible-playbook@v2
