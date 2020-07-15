@@ -1,0 +1,20 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  run-playbooks:
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
+
+    - name: clone Repo
+      run: git clone https://github.com/Paul-Michaud/portfolio-ansible.git
+    - name: change directory
+      run: cd portfolio-ansible
+    - name: Run Ansible Playbook
+      run: ansible-playbook -i production main.yml
