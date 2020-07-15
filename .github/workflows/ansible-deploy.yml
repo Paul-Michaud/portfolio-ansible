@@ -1,4 +1,5 @@
 name: Run playbook
+on: [push]
 uses: dawidd6/action-ansible-playbook@v2
 with:
   playbook: main.yml
