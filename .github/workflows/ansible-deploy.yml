@@ -1,8 +1,14 @@
-name: Run playbook
+name: Ansible Deploy
+
 on: [push]
-uses: dawidd6/action-ansible-playbook@v2
-with:
-  playbook: main.yml
-  directory: ./
-  key: ${{secrets.SSH_PRIVATE_KEY}}
-  inventory: ./production
+
+jobs:
+  deploy:
+    steps:
+    - name: Run playbook
+      uses: dawidd6/action-ansible-playbook@v2
+      with:
+        playbook: main.yml
+        directory: ./
+        key: ${{secrets.SSH_PRIVATE_KEY}}
+        inventory: ./production
