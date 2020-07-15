@@ -1,6 +1,6 @@
 # Portfolio
 
-![Ansible Lint](https://github.com/Paul-Michaud/portfolio-ansible/workflows/Ansible%20Lint/badge.svg)
+![Ansible Lint & Deploy](https://github.com/Paul-Michaud/portfolio-ansible/workflows/Ansible%20Lint%20&%20Deploy/badge.svg?branch=master)
 
 ### Usage
 
