@@ -4,20 +4,20 @@ BOLD='\e[1m'
 ORANGE='\e[38;5;202m'
 
 echo -e "
- ${BOLD}A propos de moi${NC}
+ ${BOLD}About me${NC}
                                   
- Je suis un étudiant français terminant mon ${BOLD}${ORANGE}double diplôme${NC} en informatique à l’Université 
- du Québec  à Chicoutimi. Je suis ouvert  d’esprit et  très ${BOLD}${ORANGE}curieux${NC}, j'aime  résoudre des 
- problèmes et ${BOLD}${ORANGE}aider${NC} les autres.
- J’aime en particulier ce qui touche à  l’${BOLD}${ORANGE}administration des  systèmes${NC} et  à la  sécurité, 
- mais j’aime découvrir de nouveaux domaines.
+ I am currently working at  Worldline as a ${BOLD}${ORANGE}Linux system Engineer${NC}, within a team
+ of about ten people.
 
- J'aime le ${BOLD}${ORANGE}sport${NC} en général, j'ai pratiqué le football, le tennis de table et le handball 
- en club, je fais du ${BOLD}${ORANGE}ski${NC} régulièrement au Québec.
+ I am open-minded and very ${BOLD}${ORANGE}curious${NC}, I like  to solve  problems and ${BOLD}${ORANGE} help${NC} others.
 
- Lorsque j'ai du temps libre  j'essaye de ${BOLD}${ORANGE}voyager${NC},  tout seul ou avec ma famille, je suis 
- allé en Italie, Argentine, ${BOLD}${ORANGE}Nouvelle-Zélande${NC} et aux Etats-Unis en 2017.
+ I like ${BOLD}${ORANGE}sport${NC} in general, I practiced soccer, table tennis and handball in clubs, 
+ I used to ${BOLD}${ORANGE}ski${NC} regularly in Quebec.
 
- N'hésitez pas à me contacter pour en savoir plus ;)
+ When I have free time I try to ${BOLD}${ORANGE}travel${NC}, alone or with my family, I went to Italy, 
+ Argentina, ${BOLD}${ORANGE} New Zealand${NC}, United States and many European countries.
+
+ Feel free to contact me for more information ;)
 
 "
+

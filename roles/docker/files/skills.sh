@@ -4,29 +4,31 @@ BOLD='\e[1m'
 ORANGE='\e[38;5;202m'
 
 echo -e "
- ${BOLD}Compétences${NC}
+ ${BOLD}Skills${NC}
                                  
 
-  _______ ${BOLD}${ORANGE}Langues${NC} _______    _________ ${BOLD}${ORANGE}Web${NC} _________    ___ ${BOLD}${ORANGE}Logiciel/Script${NC} ___ 
+  ______ ${BOLD}${ORANGE}Languages${NC} ______    _________ ${BOLD}${ORANGE}Web${NC} _________    _____ ${BOLD}${ORANGE}Programming${NC} _____ 
  |                       |  |                       |  |                       |
- |   Français            |  |   PHP - Javascript    |  |   C/C++               |
- |   Anglais             |  |   Ruby on rails       |  |   Java                |    
- |   Espagnol (Scolaire) |  |   NodeJS              |  |   Python - Bash       |
+ |   French              |  |   PHP - Javascript    |  |   C/C++               |
+ |   English             |  |   Ruby on rails       |  |   Java                |    
+ |   Spanish  (School)   |  |   NodeJS              |  |   Python - Bash       |
  |_______________________|  |_______________________|  |_______________________|
 
 
- Administration systèmes ${BOLD}${ORANGE}....${NC} Linux - Windows
- Base de données ${BOLD}${ORANGE}............${NC} MySQL - SQL Server - MongoDB
- Serveur Web ${BOLD}${ORANGE}................${NC} Apache - Nginx - IIS
- Autres ${BOLD}${ORANGE}.....................${NC} ElasticSearch - JupyterHub - Puppet - Ansible
+ OS ${BOLD}${ORANGE}.........................${NC} Linux - Windows
+ Database ${BOLD}${ORANGE}...................${NC} MySQL - SQL Server - MongoDB
+ Web server ${BOLD}${ORANGE}.................${NC} Apache - Nginx - IIS 
+ Virtualisation ${BOLD}${ORANGE}.............${NC} VMware
+ Automation ${BOLD}${ORANGE}.................${NC} Ansible - Puppet
+ Containerization ${BOLD}${ORANGE}...........${NC} Docker - Kubernetes - OpenShift
+ Others ${BOLD}${ORANGE}.....................${NC} ElasticSearch - JupyterHub - Inspect
 
- Cours suivis à l'Université du Québec à Chicoutimi : 
+ Courses taken at the Université du Québec à Chicoutimi : 
 
-    - ${BOLD}${ORANGE}Intelligence artificielle${NC} pour le jeu vidéo / Principes des moteurs jeux			
-    - Systèmes répartis / Bases de données réparties
-    - Interaction ${BOLD}${ORANGE}3D${NC} et réalité virtuelle 	 
-    - Programmation objet avancée
-    - Forage de données
-    - ${BOLD}${ORANGE}Gestion de projets${NC} informatiques
-
+    - ${BOLD}${ORANGE}Artificial intelligence${NC} for video games / Principles of game engines			
+    - Distributed Systems / Distributed Databases
+    - Interaction ${BOLD}${ORANGE}3D${NC} and virtual reality 	 
+    - Advanced object programming
+    - Data mining
+    - ${BOLD}${ORANGE}IT${NC} Project management
 "

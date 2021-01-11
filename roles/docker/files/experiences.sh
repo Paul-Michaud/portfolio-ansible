@@ -5,19 +5,29 @@ ORANGE='\e[38;5;202m'
 
 echo -e "
 
- ${BOLD}Expériences${NC}
+ ${BOLD}Experiences${NC}
+ 
 
-
-          ${ORANGE}Administrateur systèmes et réseaux Claranet${NC}   |   ${ORANGE}Bénévole à l'association des paralysés de France${NC}
-                     ${BOLD}Stage Juin 2015 - Septembre 2015${NC}   O   ${BOLD}Juin 2014${NC}
-                                                        |
-Stage et alternance au sein de l’équipe en charge       |   Accompagnement de vacanciers en situation de
-du  Maintien  en  Conditions  Opérationnelles des       |   handicap,  sur  tous  les actes du quotidien
-plateformes. Résolution  des  demandes clients et       |   (manger, prendre une douche, se coucher...).
-des incidents, automatisation de processus, mises       |   Animation de différentes activités, tel que
-en production, rédaction de documentations etc...       |   l'organisation de jeux, visites, excursions,
-J'ai réalisé un projet  permettant  de  récupérer       |   etc...
-des métriques sur un système automatiquement et         |
-rapidement en cas d'incident.                           |
-                                
+                       ${ORANGE}System engineer @Worldline${NC}   |   ${ORANGE}Trainee System engineer @Worldline${NC}
+                            ${BOLD}December 2018 - Today${NC}   O   ${BOLD}July 2018 - December 2018${NC}
+                                                    |
+As part of a system team specialized in sensitive   |   Study and implement a docker images registry based
+and high availabilty architectures,such as health   |   on the open source solution Harbor.
+or state project I am responsible for the install   |   
+and maintenance of Linux servers.                   |   Create different level of secure nginx configuration
+                                                    |   and use inspect to check them.
+I am also technology leader on the Red Hat OS, it   |   
+involves creating training, giving advices, etc..   |   Improve Linux administration skills.
+                                                    |
+                                                    |
+        ${ORANGE}System and network administrator @Claranet${NC}  |   ${ORANGE}Association des paralysés de France${NC}
+                        ${BOLD}June 2016 - Septembre 2016${NC}  O   ${BOLD}June 2014${NC}       
+                                                    |
+Internship  and  work-study within  the  team in    |   We went on holidays with disabled people and thus
+charge of the maintenance of the IT system.         |   we had to accompagny them during all the daily life 
+                                                    |   acts (eating, taking a shower, going to bed, etc...)
+Resolution of customer requests and incidents,      |   I animated different activites and games. We did visits, 
+process automation, production, documentation ...   |   boat excursion, ride, etc...
+                                                    |
+                                                    
 "

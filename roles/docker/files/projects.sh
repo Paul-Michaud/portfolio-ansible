@@ -4,39 +4,39 @@ BOLD='\e[1m'
 ORANGE='\e[38;5;202m'
 
 echo -e "
- ${BOLD}Projets${NC}
+ ${BOLD}Projects${NC}
         
-    ${BOLD}Robot pompier${NC} 
+    ${BOLD}Firefighter Robot${NC} 
     (${BOLD}${ORANGE}C${NC})
     (https://github.com/Paul-Michaud/Projet-C)
     
-    ${BOLD}Programmation carte microcontroleur ST7${NC}
+    ${BOLD}ST7 microcontroleur programmation${NC}
     (${BOLD}${ORANGE}Assembleur${NC})
     (https://github.com/Paul-Michaud/Assembleur_ST7)
     
-    ${BOLD}Plateforme JupyterHub avec correction de cours automatisée${NC}
+    ${BOLD}JupyterHub platform with automated course correction${NC}
     (${BOLD}${ORANGE}JupyterHub${NC}, ${BOLD}${ORANGE}Ansible${NC}, ${BOLD}${ORANGE}Nbgrader${NC}, ${BOLD}${ORANGE}Symfony${NC}, ${BOLD}${ORANGE}Bash${NC})
     (https://github.com/Paul-Michaud/jupyterhub_management)
     
-    ${BOLD}Ajout de fonctionnalités dans un programme de combat de bots.${NC}
+    ${BOLD}Addition of features in a bots fighting program${NC}
     (${BOLD}${ORANGE}C++${NC})
     (https://github.com/Paul-Michaud/Raven)
     
-    ${BOLD}Création d'un site de covoiturage${NC}
+    ${BOLD}Creation of a car-sharing site${NC}
     (${BOLD}${ORANGE}Ruby on rails${NC}, ${BOLD}${ORANGE}MySQL${NC})
     (https://github.com/DavidDelem/sitecovoiturage)
     
-    ${BOLD}Regroupement de film par genre en fonction de leur synopsis${NC}
+    ${BOLD}[AI] Grouping of films by genre according to their synopsis${NC}
     (${BOLD}${ORANGE}python${NC})
     (https://github.com/Paul-Michaud/text_classification)
     
-    ${BOLD}Bot  de notification IRC/Discord/Teamspeak 3${NC}
+    ${BOLD}IRC/Discord/Teamspeak 3 Notification Bot${NC}
     (${BOLD}${ORANGE}python${NC}, ${BOLD}${ORANGE}javascript${NC})
     (https://github.com/Paul-Michaud/ActionFPS-Teamspeak3BOT) 
     (https://github.com/Paul-Michaud/actionfps_ircbot) 
     (https://github.com/Paul-Michaud/ActionFPS-DiscordBOT)
     
-    ${BOLD}Bot de notification pour slack${NC}
+    ${BOLD}Slack Notification Bot${NC}
     (${BOLD}${ORANGE}CoffeeScript${NC})
     (https://github.com/Paul-Michaud/coffeescript)
     

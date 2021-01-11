@@ -6,10 +6,10 @@ ORANGE='\e[38;5;202m'
 echo -e "
  ${BOLD}Info${NC}
                                   
- Pour réaliser ce ${BOLD}${ORANGE}portfolio${NC} j'ai utilisé différentes technologies :
-    
- J'utilise ${BOLD}${ORANGE}GoTTY${NC} (https://github.com/yudai/gotty) pour pouvoir exécuter des commandes sur un serveur
- depuis une page html. Les serveurs sont des conteneurs ${BOLD}${ORANGE}Docker${NC} (Un par session, avec une limite de 
- session). Le serveur web est ${BOLD}${ORANGE}nginx${NC}.
+ To create this ${BOLD}${ORANGE}portfolio${NC} I used different technolgies : 
+
+ I use ${BOLD}${ORANGE}GoTTY${NC} (https://github.com/yudai/gotty) to be able to execute commands on a 
+ server from an html page. Servers where you type your commands are ${BOLD}${ORANGE}Docker${NC} containers
+ (One for each sessions, with a limit of session). The web server is ${BOLD}${ORANGE}nginx${NC}.
     
 "
