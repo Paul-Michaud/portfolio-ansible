@@ -13,6 +13,9 @@
   template:
     src: portfolio.conf.j2
     dest: /etc/nginx/conf.d/portfolio.conf
+    owner: root
+    group: root
+    mode: 0644
   notify:
     - restart nginx
 
@@ -22,9 +25,11 @@
     state: directory
     mode: 0755
 
-#- name: Generate dhparams
-#  openssl_dhparam:
-#    path: /etc/nginx/ssl/dhparams.pem
+- name: Generate dhparams
+  openssl_dhparam:
+    path: /etc/nginx/ssl/dhparam.pem
+    size: 4096
+    force: no
 
 - name: enable service nginx
   systemd:

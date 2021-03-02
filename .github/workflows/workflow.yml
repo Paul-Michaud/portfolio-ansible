@@ -3,24 +3,21 @@ name: Ansible Lint & Deploy
 on: [push]
 
 jobs:
-#  lint:
-#
-#    runs-on: ubuntu-latest
-#
-#    steps:
-#      - uses: actions/checkout@v2
-#
-#      - name: Lint Ansible Playbook
-#        uses: ansible/ansible-lint-action@master
-#        with:
-#          targets: "main.yml"
-#          override-deps: |
-#            ansible==2.9
-#            ansible-lint==4.2.0
-#          args: ""
+  lint:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Lint Ansible Playbook
+        uses: ansible/ansible-lint-action@master
+        with:
+          targets: "main.yml"
+          args: ""
 
   deploy:
-#    needs: lint
+    needs: lint
 
     runs-on: ubuntu-latest
 

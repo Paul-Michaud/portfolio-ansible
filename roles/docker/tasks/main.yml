@@ -15,7 +15,12 @@
     mode: 0755
 
 - name: Copy the necessary file to build the image
-  copy: src={{ item.src }} dest={{ item.dest }}
+  copy:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    owner: "{{ user }}"
+    group: "{{ user }}"
+    mode: "{{ item.mode }}"
   with_items:
     - { src: '.bashrc', dest: '/home/{{ user }}/portfolio/docker/linux/.bashrc', mode: '644' }
     - { src: 'all.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/all.sh', mode: '644' }
