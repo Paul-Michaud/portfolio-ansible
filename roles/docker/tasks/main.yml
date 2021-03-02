@@ -15,10 +15,10 @@
     mode: 0755
 
 - name: Copy the necessary file to build the image
-  copy: 
+  copy:
     src: "{{ item.src }}"
     dest: "{{ item.dest }}"
-    owner: "{{ user}}"
+    owner: "{{ user }}"
     group: "{{ user }}"
     mode: "{{ item.mode }}"
   with_items:

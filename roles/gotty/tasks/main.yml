@@ -13,6 +13,7 @@
     dest: /etc/systemd/system/gotty.service
     owner: root
     group: root
+    mode: 0644
   notify:
     - systemd reload
 

@@ -11,7 +11,7 @@
     - /var/www/portfolio/html/myjs/
 
 - name: Copy the necessary html files
-  copy: 
+  copy:
     src: "{{ item.src }}"
     dest: "{{ item.dest }}"
     owner: root
