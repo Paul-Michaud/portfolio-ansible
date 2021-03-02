@@ -18,14 +18,14 @@
 
 - name : Create gotty config directory
   file:
-    path: /home/{{ user }}/portfolio/gotty/
+    path: "/home/{{ user }}/portfolio/gotty/"
     state: directory
     mode: 0755
 
 - name: Copy gotty config file
   copy:
     src: gotty.config
-    dest: /home/{{ user }}/portfolio/gotty/.gotty
+    dest: "/home/{{ user }}/portfolio/gotty/.gotty"
     owner: root
     group: root
     mode: 0644
