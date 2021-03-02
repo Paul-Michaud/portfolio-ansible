@@ -11,7 +11,12 @@
     - /var/www/portfolio/html/myjs/
 
 - name: Copy the necessary html files
-  copy: src={{ item.src }} dest={{ item.dest }}
+  copy: 
+    src: {{ item.src }}
+    dest: {{ item.dest }}
+    owner: root
+    group: root
+    mode: 0644
   with_items:
     - { src: '6253478891.js', dest: '/var/www/portfolio/html/myjs/6253478891.js' }
     - { src: 'auth_token.js', dest: '/var/www/portfolio/html/myjs/auth_token.js' }
