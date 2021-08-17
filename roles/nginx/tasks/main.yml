@@ -31,7 +31,8 @@
     size: 4096
     force: no
 
-- name: enable service nginx
+- name: start and enable service nginx
   systemd:
     name: nginx
+    state: started
     enabled: yes

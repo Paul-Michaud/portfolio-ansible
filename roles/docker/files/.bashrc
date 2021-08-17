@@ -129,5 +129,6 @@ alias help="bash  $HOME/bin/help.sh"
 alias info="bash  $HOME/bin/info.sh"
 alias paul="bash $HOME/bin/paul.sh"
 alias projects="bash  $HOME/bin/projects.sh"
+alias antarctica="bash  $HOME/bin/antarctica.sh"
 
 echo "* Type <help> then press the enter key to get the list of available commands" |pv -qL 20

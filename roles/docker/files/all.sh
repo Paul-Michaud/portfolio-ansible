@@ -7,3 +7,4 @@ bash projects.sh
 bash cv.sh
 bash info.sh
 bash contact.sh
+bash antarctica.sh

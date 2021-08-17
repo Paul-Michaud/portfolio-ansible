@@ -23,6 +23,7 @@ ${ORANGE} --- ${BOLD}${ORANGE} Commands ${NC}(To learn a little more about me) $
  experiences .................... My professional & personal experiences
  paul............................ Some information about me
  projects ....................... Different projects I have worked on
+ antarctica ..................... Follow my adventures in Antarctica
 
 ${BOLD}${ORANGE} Getting started: This is a command line interface, just type a command and press
  the enter key
