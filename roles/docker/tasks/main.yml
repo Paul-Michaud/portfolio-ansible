@@ -33,6 +33,7 @@
     - { src: 'info.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/info.sh', mode: '644' }
     - { src: 'paul.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/paul.sh', mode: '644' }
     - { src: 'projects.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/projects.sh', mode: '644' }
+    - { src: 'antarctica.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/antarctica.sh', mode: '644' }
     - { src: 'Dockerfile', dest: '/home/{{ user }}/portfolio/docker/Dockerfile', mode: '644' }
 
 - name: Build the portfolio image
