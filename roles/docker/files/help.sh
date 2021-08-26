@@ -15,13 +15,13 @@ ${ORANGE} --- ${BOLD}${ORANGE} Help ${NC}(Need help ?) ${ORANGE}----------------
 
 ${ORANGE} --- ${BOLD}${ORANGE} Commands ${NC}(To learn a little more about me) ${ORANGE} ------------------------------------------------------- ${NC}
 
- all............................. Execute all of the following commands
+ all ............................ Execute all of the following commands
  skills ......................... Some of my skills
  contact ........................ To contact me
  cv ............................. See my CV
  certifications ................. My certifications and diplomas
  experiences .................... My professional & personal experiences
- paul............................ Some information about me
+ paul ........................... Some information about me
  projects ....................... Different projects I have worked on
  antarctica ..................... Follow my adventures in Antarctica
 
