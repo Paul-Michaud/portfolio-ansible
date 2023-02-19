@@ -9,7 +9,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-
+      - run: |
+              echo "Installing playbook prerequisites"
+              ansible-galaxy collection install community.crypto
       - name: Lint Ansible Playbook
         uses: ansible/ansible-lint-action@main
         with:
