@@ -15,7 +15,7 @@
     mode: 0755
 
 - name: Copy the necessary file to build the image
-  copy:
+  ansible.builtin.copy:
     src: "{{ item.src }}"
     dest: "{{ item.dest }}"
     owner: "{{ user }}"
