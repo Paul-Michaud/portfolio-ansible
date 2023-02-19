@@ -21,8 +21,6 @@
     - { src: '6253478891.js', dest: '/var/www/portfolio/html/myjs/6253478891.js' }
     - { src: 'auth_token.js', dest: '/var/www/portfolio/html/myjs/auth_token.js' }
     - { src: 'config.js', dest: '/var/www/portfolio/html/myjs/config.js' }
-    - { src: 'gtag.js', dest: '/var/www/portfolio/html/myjs/gtag.js' }
-    - { src: 'gtagua.js', dest: '/var/www/portfolio/html/myjs/gtagua.js' }
     - { src: 'jquery.min.js', dest: '/var/www/portfolio/html/myjs/jquery.min.js' }
     - { src: 'noie.js', dest: '/var/www/portfolio/html/myjs/noie.js' }
     - { src: 'portfolio.css', dest: '/var/www/portfolio/html/mycss/portfolio.css' }
