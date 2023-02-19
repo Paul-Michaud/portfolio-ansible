@@ -10,7 +10,7 @@ echo -e "
   ______ ${BOLD}${ORANGE}Languages${NC} ______    _________ ${BOLD}${ORANGE}Web${NC} _________    _____ ${BOLD}${ORANGE}Programming${NC} _____ 
  |                       |  |                       |  |                       |
  |   French              |  |   PHP - Javascript    |  |   C/C++               |
- |   English             |  |   Ruby on rails       |  |   Java                |    
+ |   English             |  |   Ruby on rails       |  |   Java - Golang       |    
  |   Spanish  (School)   |  |   NodeJS              |  |   Python - Bash       |
  |_______________________|  |_______________________|  |_______________________|
 
@@ -18,10 +18,11 @@ echo -e "
  OS ${BOLD}${ORANGE}.........................${NC} Linux - Windows
  Database ${BOLD}${ORANGE}...................${NC} MySQL - SQL Server - MongoDB
  Web server ${BOLD}${ORANGE}.................${NC} Apache - Nginx - IIS 
- Virtualisation ${BOLD}${ORANGE}.............${NC} VMware
+ Virtualisation ${BOLD}${ORANGE}.............${NC} VMware - Xen
  Automation ${BOLD}${ORANGE}.................${NC} Ansible - Puppet
  Containerization ${BOLD}${ORANGE}...........${NC} Docker - Kubernetes - OpenShift
- Others ${BOLD}${ORANGE}.....................${NC} ElasticSearch - JupyterHub - Inspect
+ Monitoring ${BOLD}${ORANGE}.................${NC} Prometheus - Zabbix - Grafana
+ Others ${BOLD}${ORANGE}.....................${NC} ElasticSearch - JupyterHub - Inspect - Git - Gitlab (CI/CD)
 
  Courses taken at the Université du Québec à Chicoutimi : 
 

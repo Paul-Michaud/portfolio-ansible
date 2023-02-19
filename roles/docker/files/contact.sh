@@ -6,6 +6,6 @@ ORANGE='\e[38;5;202m'
 echo -e "
  ${BOLD}Contact${NC}
 
- paul.du56@${ORANGE}gmail${NC}.com
+ paul.mchd@${ORANGE}protonmail${NC}.com
  
 "

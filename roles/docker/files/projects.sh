@@ -5,6 +5,14 @@ ORANGE='\e[38;5;202m'
 
 echo -e "
  ${BOLD}Projects${NC}
+
+    ${BOLD}Antarctica Blog${NC} 
+    (${BOLD}${ORANGE}Hugo, Cloudflare pages${NC})
+    (https://github.com/Paul-Michaud/blog_ipev)
+
+    ${BOLD}This portfolio${NC} 
+    (${BOLD}${ORANGE}Docker, Nginx, Bash${NC})
+    (https://github.com/Paul-Michaud/portfolio-ansible)
         
     ${BOLD}Firefighter Robot${NC} 
     (${BOLD}${ORANGE}C${NC})

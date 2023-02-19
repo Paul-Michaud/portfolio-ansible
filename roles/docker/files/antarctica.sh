@@ -6,7 +6,7 @@ ORANGE='\e[38;5;202m'
 echo -e "
  ${BOLD}Antarctica${NC}
 
- I'm currently in ${ORANGE}${BOLD}Antarctica${NC}, working for the French polar institute.
+ I was in ${ORANGE}${BOLD}Antarctica${NC} for a winterover in 2022, working for the French polar institute.
  
- You can follow my adventures on https://pole.michaud.bzh (French).
+ I didn't post that much on my blog https://pole.michaud.bzh (French). But you can find some pictures on my Instagram https://www.instagram.com/paulmchd/.
 "
