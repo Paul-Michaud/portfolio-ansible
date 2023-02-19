@@ -13,8 +13,7 @@ jobs:
       - name: Lint Ansible Playbook
         uses: ansible/ansible-lint-action@main
         with:
-          targets: "main.yml"
-          args: ""
+          path: "main.yml"
 
   deploy:
     needs: lint
