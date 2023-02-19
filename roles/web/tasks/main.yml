@@ -33,4 +33,4 @@
     - { src: 'robots.txt', dest: '/var/www/portfolio/html/robots.txt' }
     - { src: 'CV-Paul_Michaud.pdf', dest: '/var/www/portfolio/html/docs/CV-Paul_Michaud.pdf'}
   notify:
-    - restart gotty
+    - Restart gotty

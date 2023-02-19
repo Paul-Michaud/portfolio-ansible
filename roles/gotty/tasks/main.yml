@@ -15,7 +15,7 @@
     group: root
     mode: 0644
   notify:
-    - systemd reload
+    - Systemd reload
 
 - name: Create gotty config directory
   ansible.builtin.file:
@@ -31,7 +31,7 @@
     group: root
     mode: 0644
   notify:
-    - restart gotty
+    - Restart gotty
 
 - name: Enable and start service gotty
   ansible.builtin.systemd:
