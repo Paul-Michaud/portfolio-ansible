@@ -37,7 +37,7 @@
     - { src: 'Dockerfile', dest: '/home/{{ user }}/portfolio/docker/Dockerfile', mode: '644' }
 
 - name: Build the portfolio image
-  docker_image:
+  community.docker.docker_image:
     name: portfolio
     build:
       path: /home/{{ user }}/portfolio/docker
