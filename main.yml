@@ -1,6 +1,6 @@
 ---
 - hosts: production
-  gather_facts: yes
+  gather_facts: true
   become: true
   vars:
     user: "paul"

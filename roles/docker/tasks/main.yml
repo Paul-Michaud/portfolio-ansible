@@ -1,15 +1,15 @@
 - name: Install docker
-  apt:
+  ansible.builtin.apt:
     name: docker.io
 
-- name : Create linux directory
-  file:
+- name: Create linux directory
+  ansible.builtin.file:
     path: /home/{{ user }}/portfolio/docker/linux/
     state: directory
     mode: 0755
 
-- name : Create script directory
-  file:
+- name: Create script directory
+  ansible.builtin.file:
     path: /home/{{ user }}/portfolio/docker/scripts/
     state: directory
     mode: 0755
@@ -41,13 +41,13 @@
     name: portfolio
     build:
       path: /home/{{ user }}/portfolio/docker
-      pull: yes
+      pull: true
     state: present
     source: build
-    force_source: yes
+    force_source: true
 
 - name: Adding user that will run gotty to docker group
-  user:
+  ansible.builtin.user:
     name: '{{ user }}'
     groups: docker
-    append: yes
+    append: true

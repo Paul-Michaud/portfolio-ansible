@@ -1,16 +1,16 @@
 - name: Add nginx repository
-  apt_repository:
+  ansible.builtin.apt_repository:
     repo: deb http://nginx.org/packages/mainline/ubuntu/ bionic nginx
     state: present
     filename: nginx
-    update_cache: yes
+    update_cache: true
 
 - name: Install nginx
-  apt:
+  ansible.builtin.apt:
     name: nginx
 
 - name: Copy nginx config file
-  template:
+  ansible.builtin.template:
     src: portfolio.conf.j2
     dest: /etc/nginx/conf.d/portfolio.conf
     owner: root
@@ -20,7 +20,7 @@
     - restart nginx
 
 - name: Create ssl certs directory
-  file:
+  ansible.builtin.file:
     path: /etc/nginx/ssl
     state: directory
     mode: 0755
@@ -29,10 +29,10 @@
   openssl_dhparam:
     path: /etc/nginx/ssl/dhparam.pem
     size: 4096
-    force: no
+    force: false
 
-- name: start and enable service nginx
-  systemd:
+- name: Start and enable service nginx
+  ansible.builtin.systemd:
     name: nginx
     state: started
-    enabled: yes
+    enabled: true

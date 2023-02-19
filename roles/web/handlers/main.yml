@@ -1,4 +1,4 @@
-- name: restart gotty
-  systemd:
+- name: Restart gotty
+  ansible.builtin.systemd:
     state: restarted
     name: gotty

@@ -1,5 +1,5 @@
 - name: Copy log script
-  copy:
+  ansible.builtin.copy:
     src: getlogs.sh
     dest: /usr/local/bin/getlogs.sh
     owner: root
@@ -7,8 +7,7 @@
     mode: 0750
 
 - name: Add logging job to crontab
-  cron:
+  ansible.builtin.cron:
     name: "Check portfolio containers"
     minute: "*/10"
     job: "/usr/local/bin/getlogs.sh >/dev/null 2>&1"
-

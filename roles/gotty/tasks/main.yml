@@ -1,14 +1,14 @@
 - name: Install go
-  apt:
+  ansible.builtin.apt:
     name: golang
 
 - name: Get gotty from source
-  command: go get github.com/yudai/gotty
-  become: no
-  changed_when: False
+  ansible.builtin.command: go get github.com/yudai/gotty
+  become: false
+  changed_when: false
 
 - name: Copy gotty service file
-  template:
+  ansible.builtin.template:
     src: gotty.service.j2
     dest: /etc/systemd/system/gotty.service
     owner: root
@@ -17,14 +17,14 @@
   notify:
     - systemd reload
 
-- name : Create gotty config directory
-  file:
+- name: Create gotty config directory
+  ansible.builtin.file:
     path: "/home/{{ user }}/portfolio/gotty/"
     state: directory
     mode: 0755
 
 - name: Copy gotty config file
-  copy:
+  ansible.builtin.copy:
     src: gotty.config
     dest: "/home/{{ user }}/portfolio/gotty/.gotty"
     owner: root
@@ -33,8 +33,8 @@
   notify:
     - restart gotty
 
-- name: enable and start service gotty
-  systemd:
+- name: Enable and start service gotty
+  ansible.builtin.systemd:
     name: gotty
-    enabled: yes
+    enabled: true
     state: started
