@@ -1,9 +1,9 @@
-- name: Add nginx repository
-  ansible.builtin.apt_repository:
-    repo: deb http://nginx.org/packages/mainline/ubuntu/ bionic nginx
-    state: present
-    filename: nginx
-    update_cache: true
+# - name: Add nginx repository
+#   ansible.builtin.apt_repository:
+#     repo: deb http://nginx.org/packages/mainline/ubuntu/ bionic nginx
+#     state: present
+#     filename: nginx
+#     update_cache: true
 
 - name: Install nginx
   ansible.builtin.apt:
