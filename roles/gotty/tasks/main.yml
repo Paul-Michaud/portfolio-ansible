@@ -3,7 +3,7 @@
     name: golang
 
 - name: Get gotty from source
-  ansible.builtin.command: go get github.com/yudai/gotty
+  ansible.builtin.command: go install github.com/yudai/gotty@latest
   become: false
   changed_when: false
 
