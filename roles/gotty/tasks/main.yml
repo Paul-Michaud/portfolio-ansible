@@ -1,11 +1,11 @@
-- name: Install go
-  ansible.builtin.apt:
-    name: golang
-
-- name: Get gotty from source
-  ansible.builtin.command: go install github.com/ghthor/gotty/v2@latest
+- name: Download gotty executable
+  ansible.builtin.unarchive:
+    src: https://github.com/yudai/gotty/releases/download/v2.0.0-alpha.3/gotty_2.0.0-alpha.3_linux_amd64.tar.gz
+    dest: "/home/{{ user }}/go/bin/"
+    remote_src: yes
   become: false
-  changed_when: false
+  notify:
+    - Restart gotty
 
 - name: Copy gotty service file
   ansible.builtin.template:
