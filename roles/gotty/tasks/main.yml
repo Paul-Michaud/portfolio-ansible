@@ -2,7 +2,7 @@
   ansible.builtin.unarchive:
     src: https://github.com/yudai/gotty/releases/download/v2.0.0-alpha.3/gotty_2.0.0-alpha.3_linux_amd64.tar.gz
     dest: "/home/{{ user }}/go/bin/"
-    remote_src: yes
+    remote_src: true
   become: false
   notify:
     - Restart gotty
@@ -13,7 +13,7 @@
     dest: /etc/systemd/system/gotty.service
     owner: root
     group: root
-    mode: 0644
+    mode: "0644"
   notify:
     - Systemd reload
 
@@ -21,7 +21,7 @@
   ansible.builtin.file:
     path: "/home/{{ user }}/portfolio/gotty/"
     state: directory
-    mode: 0755
+    mode: "0755"
 
 - name: Copy gotty config file
   ansible.builtin.copy:
@@ -29,7 +29,7 @@
     dest: "/home/{{ user }}/portfolio/gotty/.gotty"
     owner: root
     group: root
-    mode: 0644
+    mode: "0644"
   notify:
     - Restart gotty
 
