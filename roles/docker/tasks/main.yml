@@ -22,18 +22,18 @@
     group: "{{ user }}"
     mode: "{{ item.mode }}"
   with_items:
-    - {src: '.bashrc', dest: '/home/{{ user }}/portfolio/docker/linux/.bashrc', mode: '644'}
-    - {src: 'all.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/all.sh', mode: '644'}
-    - {src: 'skills.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/skills.sh', mode: '644'}
-    - {src: 'contact.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/contact.sh', mode: '644'}
-    - {src: 'cv.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/cv.sh', mode: '644'}
-    - {src: 'certifications.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/certifications.sh', mode: '644'}
-    - {src: 'experiences.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/experiences.sh', mode: '644'}
-    - {src: 'help.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/help.sh', mode: '644'}
-    - {src: 'info.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/info.sh', mode: '644'}
-    - {src: 'paul.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/paul.sh', mode: '644'}
-    - {src: 'projects.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/projects.sh', mode: '644'}
-    - {src: 'antarctica.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/antarctica.sh', mode: '644'}
+    - {src: 'linux/.bashrc', dest: '/home/{{ user }}/portfolio/docker/linux/.bashrc', mode: '644'}
+    - {src: 'scripts/all.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/all.sh', mode: '644'}
+    - {src: 'scripts/skills.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/skills.sh', mode: '644'}
+    - {src: 'scripts/contact.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/contact.sh', mode: '644'}
+    - {src: 'scripts/cv.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/cv.sh', mode: '644'}
+    - {src: 'scripts/certifications.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/certifications.sh', mode: '644'}
+    - {src: 'scripts/experiences.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/experiences.sh', mode: '644'}
+    - {src: 'scripts/help.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/help.sh', mode: '644'}
+    - {src: 'scripts/info.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/info.sh', mode: '644'}
+    - {src: 'scripts/paul.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/paul.sh', mode: '644'}
+    - {src: 'scripts/projects.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/projects.sh', mode: '644'}
+    - {src: 'scripts/antarctica.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/antarctica.sh', mode: '644'}
     - {src: 'Dockerfile', dest: '/home/{{ user }}/portfolio/docker/Dockerfile', mode: '644'}
 
 - name: Build the portfolio image
