@@ -6,13 +6,13 @@
   ansible.builtin.file:
     path: /home/{{ user }}/portfolio/docker/linux/
     state: directory
-    mode: 0755
+    mode: "0755"
 
 - name: Create script directory
   ansible.builtin.file:
     path: /home/{{ user }}/portfolio/docker/scripts/
     state: directory
-    mode: 0755
+    mode: "0755"
 
 - name: Copy the necessary file to build the image
   ansible.builtin.copy:
@@ -22,19 +22,19 @@
     group: "{{ user }}"
     mode: "{{ item.mode }}"
   with_items:
-    - { src: '.bashrc', dest: '/home/{{ user }}/portfolio/docker/linux/.bashrc', mode: '644' }
-    - { src: 'all.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/all.sh', mode: '644' }
-    - { src: 'skills.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/skills.sh', mode: '644' }
-    - { src: 'contact.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/contact.sh', mode: '644' }
-    - { src: 'cv.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/cv.sh', mode: '644' }
-    - { src: 'certifications.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/certifications.sh', mode: '644' }
-    - { src: 'experiences.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/experiences.sh', mode: '644' }
-    - { src: 'help.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/help.sh', mode: '644' }
-    - { src: 'info.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/info.sh', mode: '644' }
-    - { src: 'paul.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/paul.sh', mode: '644' }
-    - { src: 'projects.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/projects.sh', mode: '644' }
-    - { src: 'antarctica.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/antarctica.sh', mode: '644' }
-    - { src: 'Dockerfile', dest: '/home/{{ user }}/portfolio/docker/Dockerfile', mode: '644' }
+    - {src: '.bashrc', dest: '/home/{{ user }}/portfolio/docker/linux/.bashrc', mode: '644'}
+    - {src: 'all.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/all.sh', mode: '644'}
+    - {src: 'skills.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/skills.sh', mode: '644'}
+    - {src: 'contact.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/contact.sh', mode: '644'}
+    - {src: 'cv.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/cv.sh', mode: '644'}
+    - {src: 'certifications.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/certifications.sh', mode: '644'}
+    - {src: 'experiences.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/experiences.sh', mode: '644'}
+    - {src: 'help.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/help.sh', mode: '644'}
+    - {src: 'info.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/info.sh', mode: '644'}
+    - {src: 'paul.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/paul.sh', mode: '644'}
+    - {src: 'projects.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/projects.sh', mode: '644'}
+    - {src: 'antarctica.sh', dest: '/home/{{ user }}/portfolio/docker/scripts/antarctica.sh', mode: '644'}
+    - {src: 'Dockerfile', dest: '/home/{{ user }}/portfolio/docker/Dockerfile', mode: '644'}
 
 - name: Build the portfolio image
   community.docker.docker_image:

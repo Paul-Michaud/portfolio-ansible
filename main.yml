@@ -14,8 +14,8 @@
       ansible.builtin.raw: sudo apt-get -y install python
       changed_when: false
   roles:
-    - { role: web, tags: web }
-    - { role: nginx, tags: nginx }
-    - { role: docker, tags: docker }
-    - { role: gotty, tags: gotty }
-    - { role: tools, tags: tools }
+    - {role: web, tags: web}
+    - {role: nginx, tags: nginx}
+    - {role: docker, tags: docker}
+    - {role: gotty, tags: gotty}
+    - {role: tools, tags: tools}

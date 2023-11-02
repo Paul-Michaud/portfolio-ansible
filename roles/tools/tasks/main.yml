@@ -4,7 +4,7 @@
     dest: /usr/local/bin/getlogs.sh
     owner: root
     group: root
-    mode: 0750
+    mode: "0750"
 
 - name: Add logging job to crontab
   ansible.builtin.cron:

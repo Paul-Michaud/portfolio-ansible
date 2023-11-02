@@ -15,7 +15,7 @@
     dest: /etc/nginx/conf.d/portfolio.conf
     owner: root
     group: root
-    mode: 0644
+    mode: "0644"
   notify:
     - Restart nginx
 
@@ -23,7 +23,7 @@
   ansible.builtin.file:
     path: /etc/nginx/ssl
     state: directory
-    mode: 0755
+    mode: "0755"
 
 - name: Generate dhparams
   community.crypto.openssl_dhparam:
