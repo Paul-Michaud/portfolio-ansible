@@ -1,6 +1,7 @@
 - name: Download gotty executable
   ansible.builtin.unarchive:
-    src: https://github.com/yudai/gotty/releases/download/v2.0.0-alpha.3/gotty_2.0.0-alpha.3_linux_amd64.tar.gz
+    # src: https://github.com/yudai/gotty/releases/download/v2.0.0-alpha.3/gotty_2.0.0-alpha.3_linux_amd64.tar.gz
+    src: https://github.com/sorenisanerd/gotty/releases/download/v1.5.0/gotty_v1.5.0_linux_amd64.tar.gz
     dest: "/home/{{ user }}/go/bin/"
     remote_src: true
   become: false

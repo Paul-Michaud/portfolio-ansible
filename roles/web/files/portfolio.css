@@ -1,9 +1,9 @@
-html {
+#bootstrap-overrides html {
     min-width:100%;
     min-height:100%;
 }
 
-body{
+#bootstrap-overrides body{
     font-family: 'Ubuntu', sans-serif;
     font-size: 10px;
     background-image: url("https://i.imgur.com/BI8xbGe.jpeg");
@@ -14,19 +14,30 @@ body{
     background-size: cover;
 }
 
+div {
+     display: block;
+}
+
 #presentation {
      font-family: 'Ubuntu mono';
-     font-size: 2em;
+     font-size: 20px;
      color: white;
      min-height: 100px;
      min-width: 800px;
      max-width: 800px;
-     margin:0px auto;
+     margin: 1% auto;
      margin-bottom: 2%;
+     display: block;
 }
 
 #presentation h1 {
      text-align: center;
+     display: block;
+     margin-block-start: 0.67em;
+     margin-block-end: 0.67em;
+     margin-inline-start: 0px;
+     margin-inline-end: 0px;
+     font-weight: bold;
 }
 
 *:visited {

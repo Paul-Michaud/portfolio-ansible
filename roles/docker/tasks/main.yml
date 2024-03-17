@@ -2,6 +2,15 @@
   ansible.builtin.apt:
     name: docker.io
 
+- name: Ensure docker deamon is running
+  service:
+    name: docker
+    state: started
+
+- name: Install docker python package to use the ansible module
+  ansible.builtin.pip:
+    name: docker
+
 - name: Create linux directory
   ansible.builtin.file:
     path: /home/{{ user }}/portfolio/docker/linux/

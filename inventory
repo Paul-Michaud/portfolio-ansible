@@ -1,0 +1,5 @@
+[production]
+michaud.bzh
+
+[dev]
+localhost ansible_connection=local

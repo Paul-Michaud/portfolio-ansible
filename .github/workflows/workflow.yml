@@ -29,9 +29,8 @@ jobs:
           playbook: main.yml
           directory: ./
           key: ${{secrets.SSH_PRIVATE_KEY}}
-          inventory: |
-            [production]
-            michaud.bzh
           options: |
+            --inventory inventory
+            --limit production
             --verbose
       

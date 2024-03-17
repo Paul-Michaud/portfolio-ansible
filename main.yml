@@ -1,17 +1,12 @@
 ---
-- hosts: production
+- hosts: all
   name: Deploy portfolio
   gather_facts: true
   become: true
-  vars:
-    user: "paul"
-    domain_name: "paul.michaud.bzh"
-    ssl_certificate: "/etc/nginx/ssl/fullchain.pem"
-    ssl_certificate_key: "/etc/nginx/ssl/privkey.pem"
   remote_user: "{{ user }}"
   pre_tasks:
     - name: "Install python"
-      ansible.builtin.raw: sudo apt-get -y install python
+      ansible.builtin.raw: sudo apt-get -y install python3
       changed_when: false
   roles:
     - {role: web, tags: web}
